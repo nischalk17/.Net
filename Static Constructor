@@ -1,0 +1,27 @@
+using System;
+
+class Example
+{
+    static Example()
+    {
+        Console.WriteLine("Static Constructor Called");
+    }
+
+    public Example()
+    {
+        Console.WriteLine("Instance Constructor Called");
+    }
+
+    static void Main()
+    {
+        Example obj1 = new Example();  // Calls static and instance constructors
+        Example obj2 = new Example();  // Only calls instance constructor
+    }
+}
+
+
+/* Output:
+Static Constructor Called
+Instance Constructor Called
+Instance Constructor Called
+*/
