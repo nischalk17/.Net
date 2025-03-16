@@ -1,0 +1,54 @@
+/*
+basic use of base to:
+1️⃣ Call the base class constructor
+2️⃣ Call the base class method from the derived class
+*/
+
+
+using System;
+
+// Base class
+class Animal
+{
+    public Animal()
+    {
+        Console.WriteLine("Animal constructor called.");
+    }
+
+    public void MakeSound()
+    {
+        Console.WriteLine("Animal makes a sound.");
+    }
+}
+
+// Derived class
+class Dog : Animal
+{
+    public Dog() : base()        // Calls base class constructor
+    {
+        Console.WriteLine("Dog constructor called.");
+    }
+
+    public void Bark()
+    {
+        base.MakeSound();        // Calls base class method
+        Console.WriteLine("Dog barks.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog myDog = new Dog();    // Creates a Dog object
+        myDog.Bark();             // Calls the method using base
+    }
+}
+
+
+/* Output:
+Animal constructor called.
+Dog constructor called.
+Animal makes a sound.
+Dog barks.
+*/
