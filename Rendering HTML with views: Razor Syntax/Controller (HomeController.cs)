@@ -1,0 +1,14 @@
+using Microsoft.AspNetCore.Mvc;
+using RazorDemo.Models;
+
+namespace RazorDemo.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            var person = new Person { Name = "Alice", Age = 25 };
+            return View(person);
+        }
+    }
+}
