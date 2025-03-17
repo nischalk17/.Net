@@ -1,0 +1,20 @@
+// Basic Razor example inside an MVC View (.cshtml):
+
+@{
+    var name = "Nischal";
+    var age = 22;
+    var address = "Basundhara, Kathmandu";
+}
+
+<h1>Welcome to Razor!</h1>
+<p>Name: @name</p>
+<p>Age: @age</p>
+<p>Address: @address</p>
+
+
+/* Rendered Output in Browser:
+Welcome to Razor!
+Name: Nischal
+Age: 22
+Address: Basundhara, Kathmandu
+*/
