@@ -1,0 +1,8 @@
+<form method="post" action="/Home/SubmitForm">
+    <input type="text" name="username" placeholder="Enter your username" required>
+    
+    <!-- Hidden field -->
+    <input type="hidden" name="userId" value="123">
+    
+    <button type="submit">Submit</button>
+</form>
