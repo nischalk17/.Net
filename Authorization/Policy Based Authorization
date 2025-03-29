@@ -1,0 +1,20 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+[Authorize(Policy = "EmployeeOnly")]
+public class SalaryController : Controller
+{
+    public IActionResult Payslip()
+    {
+        return View();  // Only accessible by users with the "Employee" role claim
+    }
+}
+
+[Authorize(Policy = "HumanResources")]
+public class HumanResourcesController : Controller
+{
+    public IActionResult ManageSalaries()
+    {
+        return View();  // Only accessible by users with the "HumanResources" role claim
+    }
+}
