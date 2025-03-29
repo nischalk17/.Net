@@ -1,0 +1,28 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace CookieDemoController.Controllers
+{
+    public class CookieDemoController : Controller
+    {
+        // Set a cookie
+        public IActionResult SetCookie()
+        {
+            Response.Cookies.Append("Username", "Nischal");     // Store cookie
+            return Content("Cookie Set");
+        }
+
+        // Get a cookie
+        public IActionResult GetCookie()
+        {
+            string userName = Request.Cookies["Username"];       // Retrieve cookie
+            return Content(userName ?? "Cookie not found");
+        }
+
+        // Remove a cookie
+        public IActionResult RemoveCookie()
+        {
+            Response.Cookies.Delete("Username");                 // Remove cookie
+            return Content("Cookie Removed");
+        }
+    }
+}
