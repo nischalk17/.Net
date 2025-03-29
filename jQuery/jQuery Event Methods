@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Hide the paragraph when clicked
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            // Hide the paragraph when double-clicked
+            $("p").dblclick(function(){
+                $(this).hide();
+            });
+
+            // Show an alert when hovering over the element with ID "id1"
+            $("#id1").hover(function(){
+                alert("You hovered on id1");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Click or double-click me to hide!</p>
+    <p>Click or double-click me to hide too!</p>
+    <div id="id1" style="width:100px; height:100px; background-color:lightblue; text-align:center; line-height:100px;">
+        Hover over me
+    </div>
+</body>
+</html>
