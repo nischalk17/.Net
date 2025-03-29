@@ -1,0 +1,29 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+namespace AuthApp.Controllers
+{
+    public class DashboardController : Controller
+    {
+        // This action is available only to users with the "Admin" role
+        [Authorize(Roles = "Admin")]
+        public IActionResult AdminDashboard()
+        {
+            return View();
+        }
+
+        // This action is available only to users with the "Manager" role
+        [Authorize(Roles = "Manager")]
+        public IActionResult ManagerDashboard()
+        {
+            return View();
+        }
+
+        // This action is open to all authenticated users
+        [Authorize]
+        public IActionResult GeneralDashboard()
+        {
+            return View();
+        }
+    }
+}
