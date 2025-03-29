@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#submitBtn").click(function () {
+                // Clear previous error messages
+                $("#nameError, #emailError, #passwordError").text("");
+
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var password = $("#password").val();
+
+                // Perform validation
+                if (name == "") {
+                    $("#nameError").text("Name is required");
+                    return false;
+                }
+                if (email == "") {
+                    $("#emailError").text("Email is required");
+                    return false;
+                }
+                if (password == "") {
+                    $("#passwordError").text("Password is required");
+                    return false;
+                }
+
+                alert("Form submitted successfully!");
+                $("#myForm").submit(); // Submit form if valid
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="myForm" method="post" action="submit_form.aspx">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" style="color: red;"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" style="color: red;"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="passwordError" style="color: red;"></span><br>
+
+        <button type="button" id="submitBtn">Submit</button>
+    </form>
+</body>
+</html>
