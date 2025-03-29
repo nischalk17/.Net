@@ -1,0 +1,18 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace QueryStringExample.Controllers
+{
+    public class QueryStringExampleController : Controller
+    {
+        // Action to read query string data
+        public IActionResult Index()
+        {
+            // Retrieve query string values using Request.Query
+            string name = Request.Query["name"];
+            string age = Request.Query["age"];
+
+            // Return the values from query string
+            return Content($"Name: {name}, Age: {age}");
+        }
+    }
+}
