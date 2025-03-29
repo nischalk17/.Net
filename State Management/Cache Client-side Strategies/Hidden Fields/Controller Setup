@@ -1,0 +1,20 @@
+using Microsoft.AspNetCore.Mvc;
+
+namespace HiddenFieldExample.Controllers
+{
+    public class HomeController : Controller
+    {
+        // Action to display the form
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        // Action to handle the form submission
+        [HttpPost]
+        public IActionResult SubmitForm(string username, string userId)
+        {
+            return Content($"Username: {username}, User ID: {userId}");
+        }
+    }
+}
