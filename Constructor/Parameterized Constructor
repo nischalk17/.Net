@@ -1,0 +1,34 @@
+using System;
+
+class Car
+{
+    string brand;
+    int year;
+
+    // Parameterized Constructor
+    public Car(string brand, int year)
+    {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    public void Display()
+    {
+        Console.WriteLine($"Car Brand: {brand}, Year: {year}");
+    }
+
+    static void Main()
+    {
+        Car car1 = new Car("Honda", 2022);
+        Car car2 = new Car("Ford", 2020);
+
+        car1.Display();
+        car2.Display();
+    }
+}
+
+
+/* Output:
+Car Brand: Honda, Year: 2022
+Car Brand: Ford, Year: 2020
+*/
