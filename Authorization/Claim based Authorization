@@ -1,0 +1,15 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+
+[Authorize]
+public IActionResult AdminDashboard()
+{
+    if (User.HasClaim(c => c.Type == "Role" && c.Value == "Admin"))
+    {
+        return View("AdminDashboard");  // Show Admin Dashboard if the user has the "Admin" claim
+    }
+    else
+    {
+        return Unauthorized();  // Deny access if the user doesn't have the "Admin" claim
+    }
+}
