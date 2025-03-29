@@ -1,0 +1,50 @@
+using System;
+
+// Base Class
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Animal is eating.");
+    }
+}
+
+// Derived Class 1
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Dog is barking.");
+    }
+}
+
+// Derived Class 2
+class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Cat is meowing.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog();
+        dog.Eat();  // Inherited from Animal
+        dog.Bark(); // Defined in Dog
+
+        Cat cat = new Cat();
+        cat.Eat();  // Inherited from Animal
+        cat.Meow(); // Defined in Cat
+    }
+}
+
+
+/* Output:
+Animal is eating.
+Dog is barking.
+Animal is eating.
+Cat is meowing.
+*/
