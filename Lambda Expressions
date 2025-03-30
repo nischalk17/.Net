@@ -1,0 +1,14 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // Using lambda expression to add two numbers
+        Func<int, int, int> add = (x, y) => x + y;
+
+        // Call the lambda expression
+        Console.WriteLine(add(2, 3));  // Output: 5
+    }
+}
