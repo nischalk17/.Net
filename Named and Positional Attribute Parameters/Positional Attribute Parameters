@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Calling the function with positional arguments
+        Console.WriteLine(Greet("Nischal", "Kunwar")); 
+    }
+
+    static string Greet(string firstName, string lastName)
+    {
+        return ($"Hello, {firstName} {lastName}!");     // Returns a greeting message with the full name
+    }
+}
+
+
+// Output: Hello, Nischal Kunwar!
