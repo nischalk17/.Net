@@ -1,0 +1,29 @@
+using System;
+
+abstract class Animal
+{
+    // Abstract method in the base class does not have a body and must be overridden in a derived class
+    public abstract void Speak();
+}
+
+class Dog : Animal
+{
+    public override void Speak()  // Must override abstract method
+    {
+        Console.WriteLine("Dog barks");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Animal myAnimal = new Dog();
+        myAnimal.Speak();  // Calls Dog's Speak method (abstract method override)
+    }
+}
+
+
+/* Output:
+Dog barks
+*/
