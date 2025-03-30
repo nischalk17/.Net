@@ -1,0 +1,20 @@
+using System;
+
+delegate void MyDelegate();  // Declare a delegate
+
+class Program
+{
+    static void SayHello()
+    {
+        Console.WriteLine("Hello, Delegate!");
+    }
+
+    static void Main()
+    {
+        MyDelegate del = SayHello;  // Assign method to delegate
+        del();  // Call the method using delegate
+    }
+}
+
+
+//  Output: Hello, Delegate!
