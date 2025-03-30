@@ -1,0 +1,26 @@
+using System;
+
+public enum Day
+{
+    Sunday,    // 0
+    Monday,    // 1
+    Tuesday,   // 2
+    Wednesday, // 3
+    Thursday,  // 4
+    Friday,    // 5
+    Saturday   // 6
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Assign an enum value
+        Day today = Day.Monday;
+        Console.WriteLine("Today is: " + today); // Output: Today is: Monday
+
+        // Enum values are represented by their underlying integer value
+        int dayValue = (int)today;
+        Console.WriteLine("Day value: " + dayValue); // Output: Day value: 1
+    }
+}
