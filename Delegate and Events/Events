@@ -1,0 +1,31 @@
+using System;
+
+class Bell
+{
+    public delegate void RingBell();  // Step 1: Declare a delegate
+    public event RingBell OnRing;     // Step 2: Declare an event
+
+    public void PressButton()
+    {
+        if (OnRing != null)
+            OnRing();  // Step 3: Raise the event
+    }
+}
+
+class Program
+{
+    static void BellSound()
+    {
+        Console.WriteLine("Ding Dong! Someone is at the door.");
+    }
+
+    static void Main()
+    {
+        Bell myBell = new Bell();
+        myBell.OnRing += BellSound;  // Step 4: Subscribe to the event
+        myBell.PressButton();  // Step 5: Trigger the event
+    }
+}
+
+
+//  Output: Ding Dong! Someone is at the door.
