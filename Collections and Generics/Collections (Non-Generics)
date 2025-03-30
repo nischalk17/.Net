@@ -1,0 +1,26 @@
+using System;
+using System.Collections;  // Import non-generic collections
+
+class Program
+{
+    static void Main()
+    {
+        ArrayList list = new ArrayList();  // Create a collection
+        list.Add(10);       // Add an integer
+        list.Add("Hello");  // Add a string
+        list.Add(3.14);     // Add a float
+
+        foreach (var item in list)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}
+
+
+/*
+Output:
+10  
+Hello  
+3.14  
+*/
