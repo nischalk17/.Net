@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Calling the function with named arguments
+        Console.WriteLine(Greet(lastName: "Kunwar", firstName: "Nischal"));  
+
+    static string Greet(string firstName, string lastName)
+    {
+        return ($"Hello, {firstName} {lastName}!");  
+    }
+}
+
+
+// Output: Hello, Nischal Kunwar!
+    }
