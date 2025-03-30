@@ -1,0 +1,29 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // Define an array of numbers
+        int[] numbers = { 1, 5, 10, 15, 20, 25 };
+
+        // Use LINQ to select numbers greater than 10
+        var result = from num in numbers
+                     where num > 10
+                     select num;
+
+        // Print the result
+        foreach (var number in result)
+        {
+            Console.WriteLine(number);  
+        }
+    }
+}
+
+
+/* Output: 
+15
+20
+25
+*/
