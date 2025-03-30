@@ -1,0 +1,49 @@
+// Generic class with generic constructor, generic member variable, generic property and generic method.
+
+
+using System;
+using System.Collections.Generic;
+
+
+namespace GenericClassExample 
+{
+    class MyGenericClass<T>  // Generic class
+    {
+        private T data;  // Generic member variable
+
+        public MyGenericClass(T value)  // Generic constructor
+        {
+            data = value;
+        }
+
+        public T Data  // Generic property
+        {
+            get { return data; }
+            set { data = value; }
+        }
+
+        public void ShowData()  // Generic method
+        {
+            Console.WriteLine("Stored Data: " + data);
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            MyGenericClass<int> obj1 = new MyGenericClass<int>(100);  // Integer type
+            obj1.ShowData();
+
+            MyGenericClass<string> obj2 = new MyGenericClass<string>("Hello");  // String type
+            obj2.ShowData();
+        }
+    }
+}
+
+
+/*
+Output:
+Stored Data: 100
+Stored Data: Hello
+*/
