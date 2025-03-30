@@ -1,0 +1,32 @@
+using System;
+
+public struct Point
+{
+    public int X;
+    public int Y;
+
+    // Constructor to initialize the struct
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+
+    // Method to display the point's coordinates
+    public void Display()
+    {
+        Console.WriteLine($"Point coordinates: X = {X}, Y = {Y}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create an instance of the Point struct
+        Point point1 = new Point(5, 10);
+        
+        // Display the coordinates of point1
+        point1.Display(); // Output: Point coordinates: X = 5, Y = 10
+    }
+}
